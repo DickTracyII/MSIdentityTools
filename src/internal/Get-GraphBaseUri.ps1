@@ -14,7 +14,7 @@ function Get-GraphBaseUri {
         $baseUri = 'https://graph.microsoft.com'
         try {
             $context = Get-MgContext
-            $environment =  Get-ObjectPropertyValue $context -Name 'Environment'
+            $environment =  Get-ObjectPropertyValue $context -Property 'Environment'
             if($null -eq $environment){
                 $environment = 'Global'
             }
